@@ -13,6 +13,15 @@ Alternatively you can use the Spring Boot Maven plugin like so:
 
 * mvn spring-boot:run
 
+### Running the application testcases:
+* mvn clean test
+
+### Generate coverage report:
+* mvn jacoco:report
+
+### Coverage report location:
+* /RetailStoreOffer/target/site/jacoco/index.html
+
 ### Request Detail:
 * Sample Request URL : localhost:8080/bills/calculate
 * Request Type : Post
