@@ -21,8 +21,8 @@ public class ExceptionHandlerConfig extends ResponseEntityExceptionHandler {
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
-		log.error(ex.getMessage());
-		return new ResponseEntity<Object>(new ErrorDetail(ex.getMessage()), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+		log.error(ex.getBindingResult().getFieldError().getDefaultMessage());
+		return new ResponseEntity<Object>(new ErrorDetail(ex.getBindingResult().getFieldError().getDefaultMessage()), new HttpHeaders(), HttpStatus.BAD_REQUEST);
 	}
 
 

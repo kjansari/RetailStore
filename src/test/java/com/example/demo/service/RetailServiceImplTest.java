@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 
@@ -47,6 +48,11 @@ class RetailServiceImplTest {
 		ReflectionTestUtils.setField(service, "userRepo", userRepo);
 		ReflectionTestUtils.setField(service, "discountRepo", discountRepo);
 		ReflectionTestUtils.setField(service, "service", itemService);
+		ReflectionTestUtils.setField(service, "hundredValue", 100);
+		ReflectionTestUtils.setField(service, "discountlimitForAmount", new BigDecimal(100));
+		ReflectionTestUtils.setField(service, "noOfYear", 2);
+		ReflectionTestUtils.setField(service, "discountOnBillAmount", 5);
+		ReflectionTestUtils.setField(service, "discountIfOldCustomer", new BigDecimal(5));
 	}
 
 	@Test

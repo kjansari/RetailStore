@@ -53,7 +53,7 @@ class RetailStoreAPIControllerTest {
 		String json = "{\r\n" + "	\"itemList\":[{\"id\":1,\"quantity\":2},{\"id\":2,\"quantity\":50}],\r\n"
 				+ "    \"userid\":3\r\n" + "    }";
 
-		String expected = "{\"itemList\":[{\"id\":1,\"quantity\":2},{\"id\":2,\"quantity\":50}],\"billAmount\":525,\"discountedAmount\":500,\"userid\":3}";
+		String expected = "{\"billAmount\":525,\"discountedAmount\":500,\"itemList\":[{\"id\":1,\"quantity\":2},{\"id\":2,\"quantity\":50}],\"userid\":3}";
 		
 		when(service.calculateBillAmount(getObject())).thenReturn(getBillAmount());
 		

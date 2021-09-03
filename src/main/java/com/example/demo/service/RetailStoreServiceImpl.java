@@ -23,7 +23,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class RetailStoreServiceImpl implements RetailStoreService {
 
-//	BigDecimal percentageCount = new BigDecimal(100);
 
 	@Autowired
 	private UserRepository userRepo;
